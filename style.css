@@ -1,33 +1,30 @@
+```css
 /* =========================================================
-   PLAYFUL PARCHMENT THEME
+   ADHRIT — PERSONAL WEBSITE
+   Clean + Playful Parchment
    ========================================================= */
 
 :root {
-    /* Base */
-    --bg: #f5f0e6;
-    --surface: #fffdf7;
-    --surface-alt: #f1eadc;
+    /* Background */
+    --bg: #f4efe4;
+    --surface: #fffdf8;
 
     /* Text */
     --text: #292722;
     --muted: #777267;
     --border: #ddd5c5;
 
-    /* Playful palette */
-    --red: #e05245;
-    --orange: #ee8b32;
-    --yellow: #e5b82f;
-    --green: #4c9b67;
-    --blue: #4387c5;
-    --purple: #7659b8;
-
-    /* Default accent */
-    --accent: var(--blue);
+    /* Playful colors */
+    --red: #df5146;
+    --orange: #e98932;
+    --yellow: #dcae28;
+    --green: #4d9864;
+    --blue: #4386c3;
+    --purple: #765ab5;
 }
 
-/* =========================================================
-   RESET
-   ========================================================= */
+
+/* ==================== RESET ==================== */
 
 * {
     box-sizing: border-box;
@@ -35,62 +32,182 @@
     padding: 0;
 }
 
+
+/* ==================== BODY ==================== */
+
 body {
     font-family: Arial, Helvetica, sans-serif;
+
     background: var(--bg);
     color: var(--text);
+
     line-height: 1.6;
+
     min-height: 100vh;
 }
 
-/* =========================================================
-   LAYOUT
-   ========================================================= */
+
+/* ==================== CONTAINER ==================== */
 
 .container {
-    width: min(1100px, 92%);
+    width: min(1150px, calc(100% - 80px));
+
     margin: 0 auto;
-    padding: 40px 0;
+
+    padding: 50px 0;
 }
 
-.card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 24px;
-    margin-bottom: 20px;
+
+/* ==================== HERO ==================== */
+
+.hero {
+    padding: 20px 0 35px;
 }
 
-/* =========================================================
-   HEADINGS
-   ========================================================= */
-
-h1,
-h2,
-h3 {
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 12px;
-}
-
-/* Main heading */
-h1 {
+.hero h1 {
     font-size: 2rem;
+    font-weight: 700;
+
+    margin-bottom: 12px;
+
     color: var(--blue);
 }
 
-/* Section headings */
+.hero p {
+    max-width: 750px;
+
+    margin-bottom: 10px;
+}
+
+
+/* ==================== CARDS ==================== */
+
+.card {
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    padding: 28px;
+
+    margin-bottom: 22px;
+}
+
+
+/* ==================== HEADINGS ==================== */
+
 h2 {
     font-size: 1.5rem;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
     color: var(--purple);
+
+    margin-bottom: 18px;
 }
 
 h3 {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
+
+    font-weight: 700;
+
+    margin-bottom: 6px;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+
+/* ==================== LINKS ==================== */
+
+a {
+    color: var(--blue);
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+
+    color: var(--purple);
+}
+
+
+/* ====================
+   PROJECT ACCENTS
+   ==================== */
+
+.card-blue {
+    border-left: 5px solid var(--blue);
+
+    padding-left: 18px;
+}
+
+.card-blue h3 {
+    color: var(--blue);
+}
+
+
+.card-orange {
+    border-left: 5px solid var(--orange);
+
+    padding-left: 18px;
+}
+
+.card-orange h3 {
     color: var(--orange);
 }
 
-/* Optional colorful heading classes */
+
+.card-purple {
+    border-left: 5px solid var(--purple);
+
+    padding-left: 18px;
+}
+
+.card-purple h3 {
+    color: var(--purple);
+}
+
+
+.card-green {
+    border-left: 5px solid var(--green);
+
+    padding-left: 18px;
+}
+
+.card-green h3 {
+    color: var(--green);
+}
+
+
+/* ==================== DIVIDER ==================== */
+
+hr {
+    border: none;
+
+    border-top: 1px solid var(--border);
+
+    margin: 30px 0 20px;
+}
+
+
+/* ==================== MUTED TEXT ==================== */
+
+.muted {
+    color: var(--muted);
+
+    font-size: 0.9rem;
+}
+
+
+/* ==================== OPTIONAL COLORS ==================== */
 
 .heading-red {
     color: var(--red);
@@ -101,7 +218,7 @@ h3 {
 }
 
 .heading-yellow {
-    color: #c89d18;
+    color: var(--yellow);
 }
 
 .heading-green {
@@ -116,185 +233,32 @@ h3 {
     color: var(--purple);
 }
 
-/* =========================================================
-   TEXT
-   ========================================================= */
 
-p {
-    margin-bottom: 12px;
+/* ==================== MOBILE ==================== */
+
+@media (max-width: 700px) {
+
+    .container {
+        width: calc(100% - 32px);
+
+        padding: 30px 0;
+    }
+
+    .hero {
+        padding: 10px 0 25px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    h2 {
+        font-size: 1.35rem;
+    }
+
 }
-
-.muted {
-    color: var(--muted);
-}
-
-/* =========================================================
-   LINKS
-   ========================================================= */
-
-a {
-    color: var(--blue);
-    text-decoration: none;
-    font-weight: 600;
-}
-
-a:hover {
-    color: var(--purple);
-    text-decoration: underline;
-}
-
-/* =========================================================
-   BUTTONS
-   ========================================================= */
-
-button,
-.button {
-    font-family: Arial, Helvetica, sans-serif;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 16px;
-    cursor: pointer;
-    font-weight: 600;
-    color: white;
-    background: var(--blue);
-    transition:
-        transform 0.15s ease,
-        filter 0.15s ease;
-}
-
-button:hover,
-.button:hover {
-    filter: brightness(1.08);
-    transform: translateY(-1px);
-}
-
-.button-red {
-    background: var(--red);
-}
-
-.button-orange {
-    background: var(--orange);
-}
-
-.button-green {
-    background: var(--green);
-}
-
-.button-blue {
-    background: var(--blue);
-}
-
-.button-purple {
-    background: var(--purple);
-}
-
-/* Yellow needs dark text for readability */
-.button-yellow {
-    background: var(--yellow);
-    color: #332b16;
-}
-
-/* =========================================================
-   TAGS / BADGES
-   ========================================================= */
-
-.tag {
-    display: inline-block;
-    padding: 4px 9px;
-    border-radius: 999px;
-    font-size: 0.8rem;
-    font-weight: 700;
-    margin: 2px;
-}
-
-.tag-red {
-    background: #f7d8d4;
-    color: #a83229;
-}
-
-.tag-orange {
-    background: #f9dfc5;
-    color: #a95d18;
-}
-
-.tag-yellow {
-    background: #f5e8b9;
-    color: #806510;
-}
-
-.tag-green {
-    background: #d7eadc;
-    color: #327047;
-}
-
-.tag-blue {
-    background: #d7e5f3;
-    color: #356c9f;
-}
-
-.tag-purple {
-    background: #e2daf2;
-    color: #5a4195;
-}
-
-/* =========================================================
-   INPUTS
-   ========================================================= */
-
-input,
-textarea,
-select {
-    font-family: Arial, Helvetica, sans-serif;
-    width: 100%;
-    padding: 10px 12px;
-    background: #fffdf8;
-    color: var(--text);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    outline: none;
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-    border-color: var(--blue);
-    box-shadow: 0 0 0 2px #4387c522;
-}
-
-/* =========================================================
-   COLORFUL CARD ACCENTS
-   ========================================================= */
-
-.card-red {
-    border-left: 5px solid var(--red);
-}
-
-.card-orange {
-    border-left: 5px solid var(--orange);
-}
-
-.card-yellow {
-    border-left: 5px solid var(--yellow);
-}
-
-.card-green {
-    border-left: 5px solid var(--green);
-}
-
-.card-blue {
-    border-left: 5px solid var(--blue);
-}
-
-.card-purple {
-    border-left: 5px solid var(--purple);
-}
-
-/* =========================================================
-   DIVIDER
-   ========================================================= */
-
-hr {
-    border: none;
-    border-top: 1px solid var(--border);
-    margin: 24px 0;
-}
+```
