@@ -1,0 +1,300 @@
+/* =========================================================
+   PLAYFUL PARCHMENT THEME
+   ========================================================= */
+
+:root {
+    /* Base */
+    --bg: #f5f0e6;
+    --surface: #fffdf7;
+    --surface-alt: #f1eadc;
+
+    /* Text */
+    --text: #292722;
+    --muted: #777267;
+    --border: #ddd5c5;
+
+    /* Playful palette */
+    --red: #e05245;
+    --orange: #ee8b32;
+    --yellow: #e5b82f;
+    --green: #4c9b67;
+    --blue: #4387c5;
+    --purple: #7659b8;
+
+    /* Default accent */
+    --accent: var(--blue);
+}
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* =========================================================
+   LAYOUT
+   ========================================================= */
+
+.container {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+}
+
+/* =========================================================
+   HEADINGS
+   ========================================================= */
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+/* Main heading */
+h1 {
+    font-size: 2rem;
+    color: var(--blue);
+}
+
+/* Section headings */
+h2 {
+    font-size: 1.5rem;
+    color: var(--purple);
+}
+
+h3 {
+    font-size: 1.15rem;
+    color: var(--orange);
+}
+
+/* Optional colorful heading classes */
+
+.heading-red {
+    color: var(--red);
+}
+
+.heading-orange {
+    color: var(--orange);
+}
+
+.heading-yellow {
+    color: #c89d18;
+}
+
+.heading-green {
+    color: var(--green);
+}
+
+.heading-blue {
+    color: var(--blue);
+}
+
+.heading-purple {
+    color: var(--purple);
+}
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+p {
+    margin-bottom: 12px;
+}
+
+.muted {
+    color: var(--muted);
+}
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    color: var(--purple);
+    text-decoration: underline;
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+button,
+.button {
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-weight: 600;
+    color: white;
+    background: var(--blue);
+    transition:
+        transform 0.15s ease,
+        filter 0.15s ease;
+}
+
+button:hover,
+.button:hover {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+}
+
+.button-red {
+    background: var(--red);
+}
+
+.button-orange {
+    background: var(--orange);
+}
+
+.button-green {
+    background: var(--green);
+}
+
+.button-blue {
+    background: var(--blue);
+}
+
+.button-purple {
+    background: var(--purple);
+}
+
+/* Yellow needs dark text for readability */
+.button-yellow {
+    background: var(--yellow);
+    color: #332b16;
+}
+
+/* =========================================================
+   TAGS / BADGES
+   ========================================================= */
+
+.tag {
+    display: inline-block;
+    padding: 4px 9px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin: 2px;
+}
+
+.tag-red {
+    background: #f7d8d4;
+    color: #a83229;
+}
+
+.tag-orange {
+    background: #f9dfc5;
+    color: #a95d18;
+}
+
+.tag-yellow {
+    background: #f5e8b9;
+    color: #806510;
+}
+
+.tag-green {
+    background: #d7eadc;
+    color: #327047;
+}
+
+.tag-blue {
+    background: #d7e5f3;
+    color: #356c9f;
+}
+
+.tag-purple {
+    background: #e2daf2;
+    color: #5a4195;
+}
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+input,
+textarea,
+select {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    padding: 10px 12px;
+    background: #fffdf8;
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 2px #4387c522;
+}
+
+/* =========================================================
+   COLORFUL CARD ACCENTS
+   ========================================================= */
+
+.card-red {
+    border-left: 5px solid var(--red);
+}
+
+.card-orange {
+    border-left: 5px solid var(--orange);
+}
+
+.card-yellow {
+    border-left: 5px solid var(--yellow);
+}
+
+.card-green {
+    border-left: 5px solid var(--green);
+}
+
+.card-blue {
+    border-left: 5px solid var(--blue);
+}
+
+.card-purple {
+    border-left: 5px solid var(--purple);
+}
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 24px 0;
+}
